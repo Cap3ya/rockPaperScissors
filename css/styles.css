@@ -1,0 +1,148 @@
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {}
+
+body {
+    background-color: #282828;
+    max-width: 1280px;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    /*TYPOGRAPHY*/
+    font-family: poppins;
+    text-align: center;
+
+    /*DISPLAY .flex.column*/
+
+    &>* {
+        padding: .5em;
+        width: 100%;
+    }
+
+    & header,
+    footer {
+        background-color: black;
+        color: white;
+
+        & a {
+            color: inherit;
+
+            &:hover {
+                color: orange;
+            }
+        }
+    }
+
+    & main {
+        flex: 1;
+        justify-content: space-between !important;
+        background-color: white;
+    }
+
+    #pickItem {
+        & h2 {
+            margin: 1em 0;
+        }
+
+        & .items {
+            margin: 0 1em
+        }
+    }
+
+    #players-item {
+        &>* {
+            padding: 1em;
+        }
+
+        & #player1-item,
+        #player2-item {
+            height: 30px;
+        }
+
+        & #player1-item-img,
+        #player2-item-img {
+            height: 75px;
+
+        }
+    }
+
+    #players-score {
+        padding: 1em;
+        height: 100px;
+    }
+
+    &>p {
+        /*ROUND*/
+        padding: 1em;
+    }
+}
+
+button,
+#player1-item-img,
+#player2-item-img {
+    cursor: pointer;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1em;
+    outline: none;
+    border: none;
+
+    &[name="rock"] {
+        background-image: url(../image/rock.svg);
+    }
+
+    &[name="paper"] {
+        background-image: url(../image/paper.svg);
+    }
+
+    &[name="scissors"] {
+        background-image: url(../image/scissors.svg);
+    }
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: 75px;
+    width: 75px;
+
+    &#btnReset {
+        color: orange;
+        font-weight: 600;
+        border: 1px solid orange;
+        border-radius: 5px;
+
+        margin: 2em;
+        width: 10em;
+
+        &:hover {
+            background-color: orange;
+            border-color: white;
+            color: white;
+        }
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.column {
+        flex-direction: column;
+    }
+}
+
+#player1-score,
+#player2-score {
+    font-weight: 600;
+}

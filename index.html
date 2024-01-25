@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rock Paper Scissors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Play rock paper scissors against the computer">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="flex column">
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <main class="flex column">
+        <div id="pickItem">
+            <h2>Pick your item</h2>
+            <button class="items" name="rock" value=0></button>
+            <button class="items" name="paper" value=1></button>
+            <button class="items" name="scissors" value=2></button>
+        </div>
+
+        <div id="players-item" class="flex">
+            <div class="flex column">
+                <h3>player1</h3>
+                <p id="player1-item"></p>
+                <div id="player1-item-img"></div>
+            </div>
+            <div class="flex column">
+                <h3>player2</h3>
+                <p id="player2-item"></p>
+                <div id="player2-item-img"></div>
+            </div>
+        </div>
+
+        <div id="players-score">
+            <p>
+                Score:
+                <span id="player1-score"></span>
+                -
+                <span id="player2-score"></span>
+            </p>
+            <p id="game-outcome">Outcomes: </p>
+        </div>
+
+        <p>Round:
+            <span id="game-round"></span>
+        </p>
+
+        <button id="btnReset">Reset</button>
+    </main>
+
+    <footer>
+        Crafted by <a href="https://capeya.me/">Capeya</a>
+    </footer>
+
+    <script type="module" src="./javascript/index.js"></script>
+
+</body>
+
+</html>
